@@ -1,6 +1,6 @@
 # Open Source Hackathon - Elite Coders
 
-Welcome to the Elite Coders Open Source Hackathon repository!
+Welcome to the Elite Coders Open Source Hackathon repository
 
 ## About
 This is the official repository for the Elite Coders team participating in the Open Source Hackathon.
