@@ -2,8 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   env: {
-    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL || 'https://open-source-hackathon-elite-coders.onrender.com/api',
-    NEXT_PUBLIC_SOCKET_URL: process.env.NEXT_PUBLIC_SOCKET_URL || 'https://open-source-hackathon-elite-coders.onrender.com',
+    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL || 'https://open-source-hackathon-elite-coders-production.up.railway.app/api',
+    NEXT_PUBLIC_SOCKET_URL: process.env.NEXT_PUBLIC_SOCKET_URL || 'https://open-source-hackathon-elite-coders-production.up.railway.app',
   },
   typescript: {
     ignoreBuildErrors: true,
