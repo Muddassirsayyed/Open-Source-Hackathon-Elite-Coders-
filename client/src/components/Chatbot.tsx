@@ -102,7 +102,7 @@ export default function Chatbot() {
         {
           id: Math.random().toString(),
           sender: 'ai',
-          text: "Sorry, I am having trouble connecting to the backend. Please check if the Express server is running on port 5000.",
+          text: "Sorry, I am having trouble connecting to the backend. Please check if the Express server is running on port 5005.",
           timestamp: new Date()
         }
       ]);
