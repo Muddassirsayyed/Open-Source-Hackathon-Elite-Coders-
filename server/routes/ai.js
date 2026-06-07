@@ -3,9 +3,14 @@ import Professional from '../models/Professional.js';
 
 const router = express.Router();
 
-// Simple mock/local AI engine to simulate intelligent answers
-router.post('/chat', async (req, res) => {
+// Reusable chat handler for NLP matching
+const chatHandler = async (req, res) => {
   const { message } = req.body;
+  
+  if (!message) {
+    return res.status(400).json({ success: false, message: "Message is required" });
+  }
+  
   const lowercaseMsg = message.toLowerCase();
 
   try {
@@ -70,7 +75,7 @@ router.post('/chat', async (req, res) => {
     } else if (lowercaseMsg.includes('hello') || lowercaseMsg.includes('hi') || lowercaseMsg.includes('hey') || lowercaseMsg.includes('status')) {
       reply = "Hello! 👋 I'm **FixMate AI**, your smart home assistant. I can help you search for local service professionals, manage your active bookings, answer pricing FAQs, or trigger Emergency service dispatches. What service do you need today?";
     } else {
-      reply = "I'm not sure I fully understood. I can help you find Plumbers, Electricians, Carpenters, Mechanics, AC repair professionals, and more. Try asking something like:\n\n- *'I need an Electrician'* \n- *'Is there a Plumber near me?'* \n- *'How does Emergency Mode work?'*";
+      reply = "I'm not sure I fully understood. I can help you find Plumbers, Electricians, Carpenters, Mechanics, AC repair professionals, and more. Try asking something like:\n\n- *'I need an Electrician'*\n- *'Is there a Plumber near me?'*\n- *'How does Emergency Mode work?'*";
     }
 
     res.json({
@@ -82,6 +87,9 @@ router.post('/chat', async (req, res) => {
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
   }
-});
+};
+
+router.post('/chat', chatHandler);
+router.post('/', chatHandler);
 
 export default router;

@@ -101,6 +101,18 @@ router.get('/me', protect, async (req, res) => {
   }
 });
 
+// @desc    Get user profile (alias)
+// @route   GET /api/auth/profile
+// @access  Private
+router.get('/profile', protect, async (req, res) => {
+  try {
+    const user = await User.findById(req.user._id).select('-password');
+    res.json({ success: true, user });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+});
+
 // @desc    Update user location
 // @route   PUT /api/auth/location
 // @access  Private

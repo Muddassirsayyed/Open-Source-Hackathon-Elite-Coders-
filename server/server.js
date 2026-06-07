@@ -11,6 +11,7 @@ import professionalRoutes from './routes/professionals.js';
 import bookingRoutes from './routes/bookings.js';
 import reviewRoutes from './routes/reviews.js';
 import aiRoutes from './routes/ai.js';
+import serviceRoutes from './routes/services.js';
 
 dotenv.config();
 
@@ -44,6 +45,8 @@ app.use('/api/professionals', professionalRoutes);
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/reviews', reviewRoutes);
 app.use('/api/ai', aiRoutes);
+app.use('/api/chat', aiRoutes);
+app.use('/api/services', serviceRoutes);
 
 // Root endpoint welcome message
 app.get('/', (req, res) => {
