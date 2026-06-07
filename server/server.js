@@ -47,7 +47,7 @@ app.use('/api/ai', aiRoutes);
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'OK', message: 'FixMate AI Server is running smoothly!' });
+  res.json({ status: 'ok' });
 });
 
 // Socket.io Real-time connection handlers
