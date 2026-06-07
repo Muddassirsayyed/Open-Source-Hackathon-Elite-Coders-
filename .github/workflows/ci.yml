@@ -1,0 +1,43 @@
+name: FixMate AI CI Check
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-server:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install server dependencies
+        run: |
+          cd server
+          npm ci
+      - name: Build check
+        run: echo "Server dependencies validation successful"
+
+  build-client:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install client dependencies
+        run: |
+          cd client
+          npm ci --legacy-peer-deps
+      - name: Build Next.js app
+        run: |
+          cd client
+          npm run build
+        env:
+          NEXT_PUBLIC_API_URL: "http://localhost:5000/api"
+          NEXT_PUBLIC_SOCKET_URL: "http://localhost:5000"
