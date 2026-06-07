@@ -68,7 +68,21 @@ Ensure you have the following software installed:
 3. Go to Network Access -> Add IP Address -> Allow Access from Anywhere (`0.0.0.0/0`).
 4. Copy your Connection String and replace `MONGODB_URI` inside your server environment variables.
 
-### Deploying Backend (e.g. Render, Heroku)
+### Deploying Backend (e.g. Railway, Render, Heroku)
+
+#### Option A: Deploying on Railway (Recommended 🚀)
+Since we've added a root `package.json` router, deploying on Railway is plug-and-play:
+1. Log in to [Railway](https://railway.app/).
+2. Click **New Project** -> **Deploy from GitHub repo**.
+3. Select your repository: `Open-Source-Hackathon-Elite-Coders-`.
+4. Railway will auto-detect the root `package.json` and automatically run `node server/server.js`.
+5. Go to the **Variables** tab and add:
+   * `MONGODB_URI`: Your MongoDB Atlas connection string (or use a Railway MongoDB plugin).
+   * `JWT_SECRET`: Your JSON Web Token secret signature.
+6. Go to **Settings** -> **Public Networking** -> click **Generate Domain** to get your public API URL.
+7. Use this generated domain (e.g., `https://xxx.up.railway.app`) to update the Vercel Frontend environment variables!
+
+#### Option B: Deploying on Render / Heroku
 *   Root Directory: `server`
 *   Build Command: `npm install`
 *   Start Command: `npm start`
@@ -77,4 +91,6 @@ Ensure you have the following software installed:
 ### Deploying Frontend (e.g. Vercel, Netlify)
 *   Build Command: `npm run build`
 *   Output Directory: `client/.next`
-*   Set Environment Variables on PaaS: `NEXT_PUBLIC_API_URL` (points to deployed backend URL) and `NEXT_PUBLIC_SOCKET_URL` (points to deployed backend URL).
+*   Set Environment Variables on Vercel:
+    *   `NEXT_PUBLIC_API_URL` (points to your Railway/Render backend URL + `/api`, e.g., `https://xxx.up.railway.app/api`)
+    *   `NEXT_PUBLIC_SOCKET_URL` (points to your Railway/Render backend URL, e.g., `https://xxx.up.railway.app`)
