@@ -45,6 +45,11 @@ app.use('/api/bookings', bookingRoutes);
 app.use('/api/reviews', reviewRoutes);
 app.use('/api/ai', aiRoutes);
 
+// Root endpoint welcome message
+app.get('/', (req, res) => {
+  res.json({ message: "FixMate AI API Server is running!" });
+});
+
 // Health check endpoint
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok' });
