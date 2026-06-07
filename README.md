@@ -92,6 +92,8 @@ Participant Name : Muddassir Mushtaque Sayyed
 
 Team Name : Elite Coder's
 
+Email : sayyedmudassir423@gmail.com
+
 Project Title : FixMate AI
 Smart Local Service Finder with AI Assistance
 
