@@ -1,7 +1,7 @@
 # Open Source Hackathon 2026 Project Submission
 
 ## Participant Details
-- **Full Name**: Muddassir Sayyed
+- **Full Name**: Muddassir Mushtaque Sayyed
 - **GitHub Username**: Muddassirsayyed
 - **Team Name**: Elite Coders
 - **LinkedIn Profile**: https://www.linkedin.com/in/muddassir-mushtaque-163216361/
