@@ -88,6 +88,14 @@ The database seed script automatically creates mock professionals distributed ar
     *   *Password*: `user123`
 
 ---
+Participant Name : Muddassir Mushtaque Sayyed
+
+Team Name : Elite Coder's
+
+Project Title : FixMate AI
+Smart Local Service Finder with AI Assistance
+
+Project Description : FixMate AI is a modern full-stack web platform that connects users with trusted nearby service professionals such as plumbers, electricians, mechanics, carpenters, AC repair technicians, and more. The platform features secure authentication, location-based service discovery, real-time booking, an AI-powered chatbot, and a user-friendly interface to make finding and hiring local professionals fast, simple, and reliable.
 
 ## 📄 License
 Licensed under the MIT License. See [LICENSE](file:///d:/open%20source%20hackathon/LICENSE) for terms.
