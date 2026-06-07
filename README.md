@@ -99,5 +99,7 @@ Smart Local Service Finder with AI Assistance
 
 Project Description : FixMate AI is a modern full-stack web platform that connects users with trusted nearby service professionals such as plumbers, electricians, mechanics, carpenters, AC repair technicians, and more. The platform features secure authentication, location-based service discovery, real-time booking, an AI-powered chatbot, and a user-friendly interface to make finding and hiring local professionals fast, simple, and reliable.
 
+Linkedin : https://www.linkedin.com/in/muddassir-mushtaque-163216361/
+
 ## 📄 License
 Licensed under the MIT License. See [LICENSE](file:///d:/open%20source%20hackathon/LICENSE) for terms.
