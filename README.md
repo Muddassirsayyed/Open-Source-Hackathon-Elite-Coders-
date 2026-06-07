@@ -1,62 +1,93 @@
-# Elite Coders Open Source Hackathon 2026 Submissions
+# FixMate AI 🛠️🤖
+### *Find Trusted Service Professionals Near You*
 
-Welcome to the official submission repository for Elite Coders Open Source Hackathon 2026.
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.dot.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react)](https://react.dev/)
+[![Node.js](https://img.shields.io/badge/Node.js-20-green?style=for-the-badge&logo=node.js)](https://nodejs.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-emerald?style=for-the-badge&logo=mongodb)](https://www.mongodb.com/)
+[![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](file:///d:/open%20source%20hackathon/LICENSE)
+[![Vercel Deployment](https://img.shields.io/badge/Vercel-Deployment-blue?style=for-the-badge&logo=vercel)](https://client-nine-nu-66.vercel.app)
 
-Participants must submit their open source projects by creating a Pull Request in this repository.
-
----
-
-## 📅 Important Dates
-*   **Project Building**: 1st June – 5th June
-*   **Submission Window**: 5th June – 7th June
-
----
-
-## 🚀 How to Submit Your Project
-
-1.  **Fork** this repository to your GitHub account.
-2.  Navigate to the `Submission/` folder and copy the template file:
-    *   `Submission/PROJECT NAME.md`
-3.  **Rename** the copied file using your project name. For example:
-    *   `Submission/FixMate-AI.md`
-4.  **Fill in** all the required project details inside the markdown file, including:
-    *   Participant Name
-    *   Team Name
-    *   Project Title
-    *   Project Description
-    *   Tech Stack
-    *   GitHub Repository Link
-    *   Demo/Deployment Link (Vercel)
-5.  **Commit** your changes and push them to your forked repository.
-6.  Create a **Pull Request** to this repository using the official Project Submission Template.
-7.  Carefully complete all required fields and checkboxes in the Pull Request before submitting.
-8.  Wait for the review process. Our team will verify your submission and evaluate your project during the judging phase.
-
-> [!WARNING]
-> Incomplete submissions, private repositories, missing documentation, or incorrect project files may lead to disqualification.
+FixMate AI is a complete, full-stack, production-ready web application that helps users find and book verified local service professionals (plumbers, electricians, mechanics, painters, and tech support) in their immediate neighborhood.
 
 ---
 
-## 🪪 ID Card Instructions
-Generate your participant ID card from:
-👉 **[https://oshack.xyz](https://oshack.xyz)**
-
-### Steps:
-1.  Go to oshack.xyz
-2.  Open the ID Card section
-3.  Enter your GitHub username
-4.  Add your team name
-5.  Download your ID card
-
-If your ID is not verified, complete the mandatory giveaway/verification form first, then try generating your ID card again.
+## 🌐 Live Deployment
+*   **Vercel Hosted Link**: 👉 **[https://client-nine-nu-66.vercel.app](https://client-nine-nu-66.vercel.app)**
+*   **GitHub Repository**: [https://github.com/Muddassirsayyed/Open-Source-Hackathon-Elite-Coders-](https://github.com/Muddassirsayyed/Open-Source-Hackathon-Elite-Coders-)
 
 ---
 
-## 💝 Memori Labs Sponsor Task
-Before submitting, please support Memori Labs:
-*   **GitHub**: https://github.com/MemoriLabs/Memori
-*   **LinkedIn**: https://www.linkedin.com/company/memorilabs/
-*   **X (formerly Twitter)**: https://x.com/memorilab
-*   **Social Links**: https://linktr.ee/memorilabs
+## 🌟 Core Features
 
-*Memori Labs’ official site links to their X, LinkedIn, GitHub, YouTube, and Discord socials. Their student ambassador page also highlights their focus on student builders and campus communities.*
+*   **📍 Proximity Radar Map**: Interactive location mapping view using the browser's GPS coordinates and the **Haversine formula** to calculate distances and pinpoint active nearby workers on a circular grid.
+*   **🚨 Emergency Service Mode**: A rapid-response system. Click the pulse button to trigger a 30-minute dispatch, automatically assigning the closest active worker to your coordinates.
+*   **🤖 Conversational AI Assistant**: Floating chatbot panel running on a smart keyword-NLP engine. Guides users, displays pricing charts, recommends professionals, and initiates bookings directly in chat.
+*   **🌐 Multi-Language Support**: Complete dictionary state translations for **English**, **Hindi (हिन्दी)**, and **Marathi (मराठी)**.
+*   **⚡ WebSocket Real-time Status Sync**: Push notification bridge using Socket.io to sync user and admin dashboards instantly when bookings are accepted, completed, or cancelled.
+*   **📊 Unified Portals**: Dynamic portal access changing between the User Panel (bookings trackers, coordination center) and the Admin Panel (user logs, worker creators, status modifiers).
+*   **📱 PWA Support**: Manifest config file for mobile app layout installations.
+
+---
+
+## 🏗️ Technical Architecture
+
+```mermaid
+graph TD
+    Client[Next.js 15 Client App] <-->|REST APIs| Server[Express API Server]
+    Client <-->|WebSocket Events| SocketServer[Socket.io Server]
+    Server <--> Database[(MongoDB Atlas)]
+    SocketServer <--> Database
+```
+
+---
+
+## 🛠️ Tech Stack
+*   **Frontend**: Next.js 15 (App Router), React, TypeScript, Tailwind CSS, Framer Motion, Lucide Icons.
+*   **Backend**: Node.js, Express.js, Socket.io, Mongoose (MongoDB).
+*   **Security**: JWT (JSON Web Tokens), bcryptjs password hashing.
+*   **PWA**: Web App Manifest, Service Workers.
+
+---
+
+## 🚀 Local Installation Guide
+
+### 1. Clone & Set Up Directory
+```bash
+git clone https://github.com/Muddassirsayyed/Open-Source-Hackathon-Elite-Coders-.git
+cd Open-Source-Hackathon-Elite-Coders-
+```
+
+### 2. Configure & Start Express Backend
+```bash
+cd server
+npm install
+# Seed mock database values (Users, Professionals, Services)
+npm run seed
+# Start backend API (runs on port 5005)
+npm start
+```
+
+### 3. Configure & Start Frontend Client
+```bash
+cd ../client
+npm install
+# Start Next.js client (runs on port 3000)
+npm run dev
+```
+
+---
+
+## 🧪 Seeding & Test Credentials
+The database seed script automatically creates mock professionals distributed around Mumbai sectors. Log in using these credentials:
+*   **Admin Dashboard**:
+    *   *Email*: `admin@fixmate.com`
+    *   *Password*: `admin123`
+*   **User Dashboard**:
+    *   *Email*: `john@gmail.com`
+    *   *Password*: `user123`
+
+---
+
+## 📄 License
+Licensed under the MIT License. See [LICENSE](file:///d:/open%20source%20hackathon/LICENSE) for terms.
