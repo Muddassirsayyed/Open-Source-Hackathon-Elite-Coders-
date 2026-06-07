@@ -7,8 +7,16 @@
 [![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-emerald?style=for-the-badge&logo=mongodb)](https://www.mongodb.com/)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](file:///d:/open%20source%20hackathon/LICENSE)
 [![Open Source](https://img.shields.io/badge/Open%20Source-Elite--Coders-orange?style=for-the-badge)](https://github.com/Muddassirsayyed/Open-Source-Hackathon-Elite-Coders-)
+[![Vercel Deployment](https://img.shields.io/badge/Vercel-Deployment-blue?style=for-the-badge&logo=vercel)](https://client-nine-nu-66.vercel.app)
 
 FixMate AI is a production-ready, full-stack web application designed for hackathons, helping users discover, track, and book verified service professionals (plumbers, electricians, mechanics, and technicians) in their immediate neighborhood.
+
+---
+
+## 🌐 Live Hosted Demo
+
+The application is deployed live and can be accessed at:
+👉 **[https://client-nine-nu-66.vercel.app](https://client-nine-nu-66.vercel.app)**
 
 ---
 
